@@ -1,0 +1,13 @@
+AWSTemplateFormatVersion: "2010-09-09"
+
+Resources:
+  Repository:
+    Type: AWS::ECR::Repository
+    Properties: {}
+
+Outputs:
+  RepositoryUri:
+    Value:
+      Fn::GetAtt:
+        - Repository
+        - RepositoryUri
